@@ -1,0 +1,71 @@
+﻿<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PHP B2C</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../Content/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../Content/Site.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container body-content">
+        <div class="jumbotron">
+            <h1>PHP web application with B2C Authentication</h1>
+            <p class="lead">
+                <?php if ($user_logged_in) echo 'Successfully logged in as ' . $given_name; else echo ' Please try logging in.';?>
+            </p>
+
+            <p>
+                <?php
+                  if ($user_logged_in) echo '<a href="/logout" class="btn btn-primary btn-lg">Logout&raquo;</a>';
+                  else echo '<a href="/login" class="btn btn-primary btn-lg">Login&raquo;</a>';
+                ?>
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Creating your own B2C apps and policies.</h2>
+                <p>
+                    Completely customize your own sign in or sign up user flow by using B2C. Configure log on through existing social accounts.
+                </p>
+                <p>
+                    <a class="btn btn-default" href="https://azure.microsoft.com/en-us/documentation/services/active-directory-b2c/">Learn more &raquo;</a>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h2>Getting started with the Azure Portal.</h2>
+                <p>
+                    If you don't have an Azure subscription yet, you can sign up for a free trial and check out the Azure Portal.
+                </p>
+                <p>
+                    <a class="btn btn-default" href="https://azure.microsoft.com/en-us/features/azure-portal/">Learn more &raquo;</a>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h2>Web Hosting with Azure</h2>
+                <p>You can easily use Azure to host your website. There are also many other options for web hosting.</p>
+                <p>
+                    <a class="btn btn-default" href="https://azure.microsoft.com/en-us/services/app-service/web/">Learn more &raquo;</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        <hr />
+        <footer>
+            <p>&copy; My Application</p>
+        </footer>
+    </div>
+
+</body>

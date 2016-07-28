@@ -1,0 +1,55 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>PHP Web Project with B2C Auth</Name>
+    <Description>Creates a PHP Website that authenticates with Azure AD B2C</Description>
+    <ProjectType>PHP</ProjectType>
+    <ProjectSubType></ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+	<DefaultName>PHP with B2C WebApp</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+  
+	<Project TargetFileName="PHP B2C WebApp.phpproj" File="PHP B2C WebApp.phpproj" ReplaceParameters="true">
+      <ProjectItem TargetFileName="index.php" ReplaceParameters="true">index.php</ProjectItem>
+	  <ProjectItem TargetFileName="settings.php" ReplaceParameters="true">settings.php</ProjectItem>
+	  <ProjectItem TargetFileName="EndpointHandler.php" ReplaceParameters="true">EndpointHandler.php</ProjectItem>
+	  <ProjectItem TargetFileName="TokenChecker.php" ReplaceParameters="true">TokenChecker.php</ProjectItem>
+	  <Folder Name="phpseclib">
+		<Folder Name="Crypt">
+                <ProjectItem>AES.php</ProjectItem>
+				<ProjectItem>Base.php</ProjectItem>
+				<ProjectItem>BigInteger.php</ProjectItem>
+				<ProjectItem>Blowfish.php</ProjectItem>
+				<ProjectItem>DES.php</ProjectItem>
+				<ProjectItem>Hash.php</ProjectItem>
+				<ProjectItem>Random.php</ProjectItem>
+				<ProjectItem>RC2.php</ProjectItem>
+				<ProjectItem>RC4.php</ProjectItem>
+				<ProjectItem>Rijndael.php</ProjectItem>
+				<ProjectItem>RSA.php</ProjectItem>
+				<ProjectItem>TripleDES.php</ProjectItem>
+				<ProjectItem>Twofish.php</ProjectItem>
+		</Folder>
+      </Folder>
+	  <Folder Name="Content">
+			<ProjectItem>bootstrap.css</ProjectItem>
+			<ProjectItem>bootstrap.min.css</ProjectItem>
+			<ProjectItem>Site.css</ProjectItem>
+      </Folder>
+	  <Folder Name="Views">
+			<ProjectItem>index.html</ProjectItem>
+      </Folder>
+	</Project>	
+  </TemplateContent>
+  
+  <WizardExtension>
+		<Assembly>MyProjectWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0b2efa76394d9d04</Assembly>
+		<FullClassName>MyProjectWizard.WizardImplementation</FullClassName>
+	</WizardExtension>
+	
+</VSTemplate>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>PHP B2C WebApp</Name>
+    <ProjectGuid>144ad0a9-3165-4f53-bca7-e428ea559e45</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <AssemblyName>PHPWebProject</AssemblyName>
+    <ProjectHome />
+    <SaveServerSettingsInUserFile>false</SaveServerSettingsInUserFile>
+    <Runtime>PHP</Runtime>
+    <RuntimeVersion>5.6</RuntimeVersion>
+    <EnvName>PHPDev</EnvName>
+    <PHPDevHostName>localhost</PHPDevHostName>
+    <PHPDevAutoPort>false</PHPDevAutoPort>
+    <PHPDevPort>10266</PHPDevPort>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="index.php" />
+    <Compile Include="EndpointHandler.php" />
+    <Compile Include="phpseclib\Crypt\AES.php" />
+    <Compile Include="phpseclib\Crypt\Base.php" />
+    <Compile Include="phpseclib\Crypt\BigInteger.php" />
+    <Compile Include="phpseclib\Crypt\Blowfish.php" />
+    <Compile Include="phpseclib\Crypt\DES.php" />
+    <Compile Include="phpseclib\Crypt\Hash.php" />
+    <Compile Include="phpseclib\Crypt\Random.php" />
+    <Compile Include="phpseclib\Crypt\RC2.php" />
+    <Compile Include="phpseclib\Crypt\RC4.php" />
+    <Compile Include="phpseclib\Crypt\Rijndael.php" />
+    <Compile Include="phpseclib\Crypt\RSA.php" />
+    <Compile Include="phpseclib\Crypt\TripleDES.php" />
+    <Compile Include="phpseclib\Crypt\Twofish.php" />
+    <Compile Include="TokenChecker.php" />
+    <Compile Include="settings.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\" />
+    <Folder Include="Views\" />
+    <Folder Include="phpseclib\" />
+    <Folder Include="phpseclib\Crypt\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyProjectWizard\MyProjectWizard.csproj">
+      <Name>MyProjectWizard</Name>
+      <Project>{561cc360-548b-4f0f-bb0f-318bb8e9f321}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Views\index.html" />
+  </ItemGroup>
+</Project>
